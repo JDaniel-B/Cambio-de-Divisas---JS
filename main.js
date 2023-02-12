@@ -5,20 +5,20 @@ const cantidadDos = document.getElementById('CantidadDos');
 const tazaCambio = document.getElementById('Cambio');
 const divMoneda1 = document.getElementById('container1');
 
+var myHeaders = new Headers();
+  myHeaders.append("apikey", "MehAvzrn85ArE4ykndrtBIup1cn2IxCI");
+  
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow',
+  headers: myHeaders
+};
+
 const Calcular1 = ()=>{
   const CantidadUno = cantidadUno.value;
   const MonedaUno = monedaUno.value;
   const MonedaDos = monedaDos.value;
 
-  var myHeaders = new Headers();
-  myHeaders.append("apikey", "MehAvzrn85ArE4ykndrtBIup1cn2IxCI");
-  
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow',
-    headers: myHeaders
-  };
-  
   fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${MonedaDos}&from=${MonedaUno}&amount=${CantidadUno}`, requestOptions)
     .then(response => response.json())
     .then(result => {
@@ -32,15 +32,6 @@ const Calcular2 = ()=>{
   const CantidadDos = cantidadDos.value;
   const MonedaUno = monedaUno.value;
   const MonedaDos = monedaDos.value;
-
-  var myHeaders = new Headers();
-  myHeaders.append("apikey", "MehAvzrn85ArE4ykndrtBIup1cn2IxCI");
-  
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow',
-    headers: myHeaders
-  };
   
   fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${MonedaUno}&from=${MonedaDos}&amount=${CantidadDos}`, requestOptions)
     .then(response => response.json())
