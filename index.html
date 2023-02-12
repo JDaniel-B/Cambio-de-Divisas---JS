@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="Container-titulo">
+        <span style="--l: 'C';" class="Container-titulo_span letra">C</span>
+        <span style="--l: 'O';" class="Container-titulo_span letra">O</span>
+        <span style="--l: 'N';" class="Container-titulo_span letra">N</span>
+        <span style="--l: 'V';" class="Container-titulo_span letra">V</span>
+        <span style="--l: 'E';" class="Container-titulo_span letra">E</span>
+        <span style="--l: 'R';" class="Container-titulo_span letra">R</span>
+        <span style="--l: 'S';" class="Container-titulo_span letra">S</span>
+        <span style="--l: 'O';" class="Container-titulo_span letra">O</span>
+        <span style="--l: 'R';" class="Container-titulo_span letra">R</span>
+        <span class="Container-titulo_span espacio"></span>
+        <span style="--l: 'D';" class="Container-titulo_span letra">D</span>
+        <span style="--l: 'E';" class="Container-titulo_span letra">E</span>
+        <span class="Container-titulo_span espacio"></span>
+        <span style="--l: 'D';" class="Container-titulo_span letra">D</span>
+        <span style="--l: 'I';" class="Container-titulo_span letra">I</span>
+        <span style="--l: 'V';" class="Container-titulo_span letra">V</span>
+        <span style="--l: 'I';" class="Container-titulo_span letra">I</span>
+        <span style="--l: 'S';" class="Container-titulo_span letra">S</span>
+        <span style="--l: 'A';" class="Container-titulo_span letra">A</span>
+        <span style="--l: 'S';" class="Container-titulo_span letra">S</span>
+    </div>
+
+    <div class="Container-Cambio">
+        <label class="Container-Cambio_label" id="Cambio"></label>
+    </div>
+
+    <div class="Container">
+        <div class="Container_Moneda" id="container1">
+            <input class="Container_input-uno" type="number" id="CantidadUno" placeholder="0">
+            <div class="Container-select">
+                <div class="barra"></div>
+                <select class="Container_Moneda-Uno" id="MonedaUno">
+                    <option value="PAB">Balboa Panameño</option>
+                    <option value="CRC">Colon Costarricense</option>
+                    <option value="NOK">Corona Noruega</option>
+                    <option value="SEK">Corona Sueca</option>
+                    <option value="DKK">Corona Danesa</option>
+                    <option value="ISK">Corona Islandesa</option>
+                    <option value="AED">Dirham</option>
+                    <option value="AUD">Dolar Australiano</option>
+                    <option value="CAD">Dolar Canadiense</option>
+                    <option value="NZD">Dolar Neozelandes</option>
+                    <option value="HKD">Dolar Hongkones</option>
+                    <option value="USD">Dolar Estadounidense</option>
+                    <option value="SGD">Dólar de Singapur</option>
+                    <option value="TWD">Nuevo Dólar Taiwanés</option>
+                    <option value="EUR">Euro</option>
+                    <option value="CHF">Franco Suizo</option>
+                    <option value="UAH">Grivna</option>
+                    <option value="PYG">Guaraní Paraguayo</option>
+                    <option value="EGP">Libra Egipcia</option>
+                    <option value="GBP">Libra Esterlina</option>
+                    <option value="TRY">Lira Turca</option>
+                    <option value="HNL">Lempira Hondureño</option>
+                    <option value="ILS">Nuevo Sequel Israeli</option>
+                    <option value="ARS">Peso Argentino</option>
+                    <option value="CLP">Peso Chileno</option>
+                    <option value="COP">Peso Colombiano</option>
+                    <option value="DOP">Peso Dominicano</option>
+                    <option value="MXN">Peso Mexicano</option>
+                    <option value="PHP">Peso Filipino</option>
+                    <option value="UYU">Peso Uruguayo</option>
+                    <option value="GTQ">Quetzal Guatemalteco</option>
+                    <option value="BRL">Real Brasileño</option>
+                    <option value="IDR">Rupia Indonesia</option>
+                    <option value="INR">Rupia India</option>
+                    <option value="PKR">Rupia Pakistaní</option>
+                    <option value="RUB">Rublo Ruso</option>
+                    <option value="SAR">Riyal Saudí</option>
+                    <option value="ZAR">Rand Sudafricano</option>
+                    <option value="PEN">Sol Peruano</option>
+                    <option value="KRW">Won SurCoreano</option>
+                    <option value="CNY">Yuan</option>
+                    <option value="JPY">Yen Japones</option>
+                </select>
+            </div>
+            
+        </div>
+       
+        <div class="Container_Moneda">
+            <input class="Container_input-dos" type="number" id="CantidadDos" placeholder="0">
+            <div class="Container-select">
+                <div class="barra"></div>
+                <select class="Container_Moneda-Dos" id="MonedaDos">    
+                    <option value="PAB">Balboa Panameño</option>
+                    <option value="CRC">Colon Costarricense</option>
+                    <option value="NOK">Corona Noruega</option>
+                    <option value="SEK">Corona Sueca</option>
+                    <option value="DKK">Corona Danesa</option>
+                    <option value="ISK">Corona Islandesa</option>
+                    <option value="AED">Dirham</option>
+                    <option value="AUD">Dolar Australiano</option>
+                    <option value="CAD">Dolar Canadiense</option>
+                    <option value="NZD">Dolar Neozelandes</option>
+                    <option value="HKD">Dolar Hongkones</option>
+                    <option value="USD">Dolar Estadounidense</option>
+                    <option value="SGD">Dólar de Singapur</option>
+                    <option value="TWD">Nuevo Dólar Taiwanés</option>
+                    <option value="EUR">Euro</option>
+                    <option value="CHF">Franco Suizo</option>
+                    <option value="UAH">Grivna</option>
+                    <option value="PYG">Guaraní Paraguayo</option>
+                    <option value="EGP">Libra Egipcia</option>
+                    <option value="GBP">Libra Esterlina</option>
+                    <option value="TRY">Lira Turca</option>
+                    <option value="HNL">Lempira Hondureño</option>
+                    <option value="ILS">Nuevo Sequel Israeli</option>
+                    <option value="ARS">Peso Argentino</option>
+                    <option value="CLP">Peso Chileno</option>
+                    <option value="COP">Peso Colombiano</option>
+                    <option value="DOP">Peso Dominicano</option>
+                    <option value="MXN">Peso Mexicano</option>
+                    <option value="PHP">Peso Filipino</option>
+                    <option value="UYU">Peso Uruguayo</option>
+                    <option value="GTQ">Quetzal Guatemalteco</option>
+                    <option value="BRL">Real Brasileño</option>
+                    <option value="IDR">Rupia Indonesia</option>
+                    <option value="INR">Rupia India</option>
+                    <option value="PKR">Rupia Pakistaní</option>
+                    <option value="RUB">Rublo Ruso</option>
+                    <option value="SAR">Riyal Saudí</option>
+                    <option value="ZAR">Rand Sudafricano</option>
+                    <option value="PEN">Sol Peruano</option>
+                    <option value="KRW">Won SurCoreano</option>
+                    <option value="CNY">Yuan</option>
+                    <option value="JPY">Yen Japones</option>
+                </select>  
+            </div>
+                     
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
