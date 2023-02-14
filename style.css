@@ -1,7 +1,7 @@
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
-  margin: 0; 
+  margin: 0;
 }
 
 :root {
@@ -114,6 +114,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .Container-select select{
+  background-color: transparent;
   outline: 0;
   border: none;
   z-index: 1;
@@ -131,6 +132,43 @@ input[type=number]::-webkit-outer-spin-button {
 
 .cambiar{
   border: 2px solid blue;
+}
+
+@media only screen and (max-width: 880px) {
+  .Container-titulo_span{
+    font-size: 60px;
+    margin: 0 2px;
+    width: 60px;
+  }
+
+  .Container-titulo .letra::before {
+    font-size: 95px;
+    top: -17px;
+    right: 0;
+    left: -5px;
+    bottom: 0;
+  }
+
+  .Container_Moneda{
+    overflow: hidden;
+    display: flex;
+    border-radius: 6px;
+    width: 70%;
+    margin-bottom: 30px;
+  }
+
+  .Container_Moneda input{
+    flex-grow: 1;
+    width: 50px;
+  }
+
+  .Container-select{
+    flex-grow: 3;
+  }
+
+  .Container-Cambio_label{
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -163,5 +201,46 @@ input[type=number]::-webkit-outer-spin-button {
 
   .Container-select{
     flex-grow: 3;
+  }
+
+  .Container-Cambio_label{
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Container-titulo_span{
+    font-size: 40px;
+    margin: 0 2px;
+    width: 50px;
+  }
+
+  .Container-titulo .letra::before {
+    font-size: 75px;
+    top: -17px;
+    right: 0;
+    left: -5px;
+    bottom: 0;
+  }
+
+  .Container_Moneda{
+    overflow: hidden;
+    display: flex;
+    border-radius: 6px;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .Container_Moneda input{
+    flex-grow: 1;
+    width: 50px;
+  }
+
+  .Container-select{
+    flex-grow: 3;
+  }
+
+  .Container-Cambio_label{
+    font-size: 13px;
   }
 }

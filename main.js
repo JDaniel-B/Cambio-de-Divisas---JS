@@ -3,7 +3,6 @@ const monedaDos = document.getElementById('MonedaDos');
 const cantidadUno = document.getElementById('CantidadUno');
 const cantidadDos = document.getElementById('CantidadDos');
 const tazaCambio = document.getElementById('Cambio');
-const divMoneda1 = document.getElementById('container1');
 
 var myHeaders = new Headers();
   myHeaders.append("apikey", "MehAvzrn85ArE4ykndrtBIup1cn2IxCI");
@@ -14,32 +13,38 @@ var requestOptions = {
   headers: myHeaders
 };
 
-const Calcular1 = ()=>{
+const Calcular1 = async ()=>{
   const CantidadUno = cantidadUno.value;
   const MonedaUno = monedaUno.value;
   const MonedaDos = monedaDos.value;
+  let textSelectMonedaUno = monedaUno.options[monedaUno.selectedIndex].text;
+  let textSelectMonedaDos = monedaDos.options[monedaDos.selectedIndex].text;
 
-  fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${MonedaDos}&from=${MonedaUno}&amount=${CantidadUno}`, requestOptions)
-    .then(response => response.json())
-    .then(result => {
-      const taza = result.info.rate
-      tazaCambio.innerHTML = `1 ${MonedaUno} es igual a ${(taza).toFixed(2)} ${MonedaDos}`
-      cantidadDos.value = result.result;
-    }).catch(error => console.log('error', error));
+  try {
+    const response = await fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${MonedaDos}&from=${MonedaUno}&amount=${CantidadUno}`, requestOptions);
+    const res = await response.json();
+    tazaCambio.innerHTML = `1 ${textSelectMonedaUno} es igual a ${(res.info.rate).toFixed(2)} ${textSelectMonedaDos}`;
+    cantidadDos.value = (res.result).toFixed(2);
+  } catch (error) {
+    console.log("error", error);
+  }
 }
 
-const Calcular2 = ()=>{
+const Calcular2 = async ()=>{
   const CantidadDos = cantidadDos.value;
   const MonedaUno = monedaUno.value;
   const MonedaDos = monedaDos.value;
+  let textSelectMonedaUno = monedaUno.options[monedaUno.selectedIndex].text;
+  let textSelectMonedaDos = monedaDos.options[monedaDos.selectedIndex].text;
   
-  fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${MonedaUno}&from=${MonedaDos}&amount=${CantidadDos}`, requestOptions)
-    .then(response => response.json())
-    .then(result => {
-      const taza = result.info.rate
-      tazaCambio.innerHTML = `1 ${MonedaDos} es igual a ${(taza).toFixed(2)} ${MonedaUno}`
-      cantidadUno.value = result.result;
-    }).catch(error => console.log('error', error));
+  try {
+    const response = await fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${MonedaUno}&from=${MonedaDos}&amount=${CantidadDos}`, requestOptions);
+    const res = await response.json();
+    tazaCambio.innerHTML = `1 ${textSelectMonedaDos} es igual a ${(res.info.rate).toFixed(2)} ${textSelectMonedaUno}`;
+    cantidadDos.value = (res.result).toFixed(2);
+  } catch (error) {
+    console.log("error", error);
+  }
 }
 
 monedaUno.addEventListener('change', Calcular1);
